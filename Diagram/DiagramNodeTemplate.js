@@ -16,10 +16,7 @@ DiagramNodeTemplate = (() => {
              {
                 portId: "", cursor: "pointer",
                 fromLinkable: true,
-                fromLinkableDuplicates: false,
                 toLinkable: true,
-                toLinkableDuplicates: false
-
              } ,
                 new go.Binding("text", "Text")
             )
