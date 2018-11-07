@@ -7,6 +7,9 @@ DiagramGroupTemplate = (() => {
         return $(go.Group, "Spot",
         {
             resizable: true,
+            computesBoundsAfterDrag: true,
+            mouseDrop: DiagramManager.finishDrop,
+            handlesDragDropForMembers: true,
         },
             $(go.Shape, "Square",
                 new go.Binding("figure", "Shape"),

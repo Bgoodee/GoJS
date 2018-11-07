@@ -10,6 +10,7 @@
   <script type = "text/javascript" src = "Diagram/DiagramGroupTemplate.js"></script>
   <script type = "text/javascript" src = "Palette/PaletteManager.js"></script>
   <script type = "text/javascript" src = "Palette/PaletteNodeTemplate.js"></script>
+  <script type = "text/javascript" src = "PropertiesManager.js"></script>
    
 </head>
 
@@ -23,7 +24,21 @@
             <div id="DiagramDiv" style="border: solid 1px black; height: 700px"></div>
           </span>
           <span style="display: inline-block; vertical-align: top; width:15%">
-              <div id="InfoDiv" style="border: solid 1px black; height: 700px"></div>
+              <div id="InfoDiv" style="border: solid 1px black; height: 700px">
+                <input type="text", id="text">
+                <br>
+                <select id="shape">
+                    <option value="circle">Circle</option>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="triangle">Triangle</option>
+                </select>
+                <br>
+                <select id="color">
+                  <option value="red">Red</option>
+                  <option value="blue">Blue</option>
+                  <option value="green">Green</option>
+              </select>
+              </div>
           </span>
         </div>
       </div>
