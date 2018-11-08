@@ -12,8 +12,8 @@ DiagramManager = (() => {
         }
     ); 
 
-    myDiagram.toolManager.linkingTool.linkValidation = sameShape;
-    myDiagram.toolManager.relinkingTool.linkValidation = sameShape;
+    myDiagram.toolManager.linkingTool.linkValidation = differentShape;
+    myDiagram.toolManager.relinkingTool.linkValidation = differentShape;
     myDiagram.nodeTemplate = DiagramNodeTemplate.provideTemplates();
     myDiagram.linkTemplate = DiagramLinkTemplate.provideTemplates();
     myDiagram.groupTemplate = DiagramGroupTemplate.provideTemplates();
@@ -28,14 +28,14 @@ DiagramManager = (() => {
     if (!ok) e.diagram.currentTool.doCancel();
     }
 
-    const sameShape = (fromnode, fromport, tonode, toport) => {
+    const differentShape = (fromnode, fromport, tonode, toport) => {
         return fromnode.data.Shape != tonode.data.Shape;
     }
 
     return{
         init,
         finishDrop,
-        sameShape
+        differentShape
     }
 })()
 
